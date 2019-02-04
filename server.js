@@ -11,20 +11,6 @@ let twilio = require('twilio');
 // require environment variables
 require('dotenv').config();
 
-// Twilio setup
-// const accountSid = process.env.TWILIO_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-
-// // BUTTON
-// // import Twilio object
-// let client = new twilio(accountSid, authToken);
-// client.messages.create({
-//   body: 'Your Tushy is thinking about you!',
-//   to: process.env.TO_SMS,  // Text this number
-//   from: process.env.FROM_SMS // From a valid Twilio number
-// })
-// .then((message) => console.log(message.sid));
-
 var index = require('./routes/index');
 var app = express();
 

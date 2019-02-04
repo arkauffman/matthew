@@ -1,27 +1,30 @@
 let router = require('express').Router();
-// let textCtrl = require('./../javascript/text.js');
 let twilio = require('twilio');
+let express = require('express');
+let bodyParser = require('body-parser');
 require('dotenv').config();
 const accountSid = process.env.TWILIO_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 let client = new twilio(accountSid, authToken);
 
-/* GET home page. */
+
 router.get('/', function(req, res) {
+    res.render('index');
+});
+
+router.get('/text', function(req, res) {
+    var message = '';
     client.messages.create({
         body: 'Your Tushy is thinking about you!',
-        to: process.env.TO_SMS,  // Text this number
-        from: process.env.FROM_SMS // From a valid Twilio number
-      })
-      .then(res.render('index', console.log()));
+        from: process.env.FROM_SMS,
+        to: process.env.TO_SMS,
+    })
+    .then((message) => {
+        console.log('Message: ' + message.sid);
+    });
 
-      // (message) => console.log(message.sid)
-  // here is where I can pass info to the index page so I can send the text
-  // when Matt clicks the 'Send' button and then update that button info 
-  // upon sending/receiving text
-
-  // need tp print req to see if value == text message sent or something
-    // res.render('index', console.log(req));
+    // client.messages.each(messages => console.log(messages.status))
+    res.render('index', {message});
 });
 
 module.exports = router;
