@@ -86,54 +86,33 @@ button {
     }
 
     p.emojis {
-        font-size: 25px !important;
+        font-size: 50px !important;
     }
 }
 
 @media screen and (max-width: 600px) {
+    nav.nav-border {
+        padding-bottom: 50px !important;
+    }
+
+    a.skills-page {
+        font-size: 40px;
+    }
+
     p.thinking {
-        padding-top: 120px;
+        padding-top: 200px;
+        font-size: 60px !important;
+    }
+
+    p.text {
+        font-size: 50px !important;
+    }
+
+    p.emojis {
         font-size: 40px !important;
     }
 
-    p.text {
-        font-size: 30px !important;
-    }
-
-    p.emojis {
-        font-size: 20px !important;
-    }
-
     button {
-        font-size: 20px !important;
-    }
-}
-
-
-@media screen and (max-width: 460px) {
-    p.thinking {
         font-size: 35px !important;
-    }
-
-    p.text {
-        font-size: 25px !important;
-    }
-
-    p.emojis {
-        font-size: 18px !important;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    p.thinking {
-        font-size: 30px !important;
-    }
-
-    p.text {
-        font-size: 25px !important;
-    }
-
-    p.emojis {
-        font-size: 18px !important;
     }
 }
