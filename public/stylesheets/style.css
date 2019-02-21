@@ -17,6 +17,10 @@ nav {
     position: fixed;
 }
 
+.main {
+    padding: 80px 0;
+}
+
 form.button-form {
     text-align: center !important;
     margin-top: 50px;

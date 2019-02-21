@@ -20,9 +20,9 @@
         </div>
     </nav>
 
-    <div class="main" style="padding-top: 80px;">
+    <div class="main">
         <p class="thinking">Thinking about your Tush?</p>
-        <p class="text">Send her a text!!</p>
+        <p class="text">Send her a text!</p>
         <p class="emojis">🍑💕🍑💕🍑💕🍑💕</p>
         <form method="GET" class="button-form" action="/text">
             <button id="button-text">SEND</button>
@@ -34,16 +34,6 @@
         button.addEventListener('click', function(e) {
             console.log('button was clicked');
             button.innerHTML = 'SENT!';
-        
-            // fetch('/MessageStatus', {method: 'POST'}).then(function(response) {
-            //     if (response.ok) {
-            //         console.log('Click was recorded');
-            //         return;
-            //     }
-            //     throw new Error('Request failed.');
-            // }).catch(function(error) {
-            //     console.log(error);
-            // });
         });
     </script>
   </body>
