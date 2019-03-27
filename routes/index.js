@@ -23,8 +23,7 @@ router.get('/text', function(req, res) {
         console.log('Message: ' + message.sid);
     });
 
-    // client.messages.each(messages => console.log(messages.status))
-    res.render('index', {message});
+    res.redirect('/');
 });
 
 module.exports = router;
